@@ -34,6 +34,12 @@
 		0BD812E02A3E16D1002D5927 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812DF2A3E16D1002D5927 /* GFAlertContainerView.swift */; };
 		0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */; };
 		0BD812E62A3E179A002D5927 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812E52A3E179A002D5927 /* GFTextField.swift */; };
+		0BD812EA2A3E17FB002D5927 /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812E92A3E17FB002D5927 /* GFItemInfoVC.swift */; };
+		0BD812EC2A3E1826002D5927 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812EB2A3E1826002D5927 /* GFRepoItemVC.swift */; };
+		0BD812EE2A3E183C002D5927 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812ED2A3E183C002D5927 /* GFFollowerItemVC.swift */; };
+		0BD812F02A3E18A4002D5927 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812EF2A3E18A4002D5927 /* GFAlertVC.swift */; };
+		0BD812F22A3E195D002D5927 /* GHUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812F12A3E195D002D5927 /* GHUserInfoHeaderVC.swift */; };
+		0BD812F42A3E1999002D5927 /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812F32A3E1999002D5927 /* GFDataLoadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		0BD812DF2A3E16D1002D5927 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		0BD812E52A3E179A002D5927 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		0BD812E92A3E17FB002D5927 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
+		0BD812EB2A3E1826002D5927 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
+		0BD812ED2A3E183C002D5927 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
+		0BD812EF2A3E18A4002D5927 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		0BD812F12A3E195D002D5927 /* GHUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUserInfoHeaderVC.swift; sourceTree = "<group>"; };
+		0BD812F32A3E1999002D5927 /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GFDataLoadingVC.swift; path = GHFollowers/customViews/ViewControllers/GFDataLoadingVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,7 @@
 		0BD812A82A3DC2B5002D5927 /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				0BD812E72A3E17D2002D5927 /* ViewControllers */,
 				0BD812E42A3E1792002D5927 /* TextFields */,
 				0BD812E12A3E173B002D5927 /* ImageViews */,
 				0BD812DA2A3E1679002D5927 /* Views */,
@@ -242,6 +255,27 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		0BD812E72A3E17D2002D5927 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812E82A3E17DF002D5927 /* ItemInfoVCs */,
+				0BD812EF2A3E18A4002D5927 /* GFAlertVC.swift */,
+				0BD812F32A3E1999002D5927 /* GFDataLoadingVC.swift */,
+				0BD812F12A3E195D002D5927 /* GHUserInfoHeaderVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0BD812E82A3E17DF002D5927 /* ItemInfoVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812E92A3E17FB002D5927 /* GFItemInfoVC.swift */,
+				0BD812EB2A3E1826002D5927 /* GFRepoItemVC.swift */,
+				0BD812ED2A3E183C002D5927 /* GFFollowerItemVC.swift */,
+			);
+			path = ItemInfoVCs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +349,7 @@
 				0BD812DE2A3E16B3002D5927 /* GFItemInfoView.swift in Sources */,
 				0BD812E02A3E16D1002D5927 /* GFAlertContainerView.swift in Sources */,
 				0BD812C12A3DC4EF002D5927 /* User.swift in Sources */,
+				0BD812F22A3E195D002D5927 /* GHUserInfoHeaderVC.swift in Sources */,
 				0BD812C32A3DC526002D5927 /* UIViewController+ext.swift in Sources */,
 				0BD812992A3DBF75002D5927 /* ViewController.swift in Sources */,
 				0BD812D72A3E160D002D5927 /* FollowerCell.swift in Sources */,
@@ -324,14 +359,19 @@
 				0BD812B52A3DC399002D5927 /* GFError.swift in Sources */,
 				0BD812952A3DBF75002D5927 /* AppDelegate.swift in Sources */,
 				0BD812BD2A3DC4B4002D5927 /* PersistenceManager.swift in Sources */,
+				0BD812EC2A3E1826002D5927 /* GFRepoItemVC.swift in Sources */,
 				0BD812D12A3DC655002D5927 /* GFSecondaryTitleLabel.swift in Sources */,
 				0BD812BB2A3DC495002D5927 /* NetworkManager.swift in Sources */,
 				0BD812C92A3DC5C6002D5927 /* GFTTabBarController.swift in Sources */,
 				0BD812972A3DBF75002D5927 /* SceneDelegate.swift in Sources */,
 				0BD812CF2A3DC631002D5927 /* GFTitleLabel.swift in Sources */,
 				0BD812E62A3E179A002D5927 /* GFTextField.swift in Sources */,
+				0BD812EA2A3E17FB002D5927 /* GFItemInfoVC.swift in Sources */,
+				0BD812EE2A3E183C002D5927 /* GFFollowerItemVC.swift in Sources */,
+				0BD812F42A3E1999002D5927 /* GFDataLoadingVC.swift in Sources */,
 				0BD812DC2A3E1690002D5927 /* GFEmptyStateView.swift in Sources */,
 				0BD812D42A3DDAB0002D5927 /* GFButton.swift in Sources */,
+				0BD812F02A3E18A4002D5927 /* GFAlertVC.swift in Sources */,
 				0BD812C72A3DC566002D5927 /* UIview+ext.swift in Sources */,
 				0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */,
 				0BD812D92A3E1628002D5927 /* FavoriteCell.swift in Sources */,
