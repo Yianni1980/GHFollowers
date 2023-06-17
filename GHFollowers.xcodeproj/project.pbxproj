@@ -26,6 +26,7 @@
 		0BD812CD2A3DC60A002D5927 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812CC2A3DC60A002D5927 /* GFBodyLabel.swift */; };
 		0BD812CF2A3DC631002D5927 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812CE2A3DC631002D5927 /* GFTitleLabel.swift */; };
 		0BD812D12A3DC655002D5927 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812D02A3DC655002D5927 /* GFSecondaryTitleLabel.swift */; };
+		0BD812D42A3DDAB0002D5927 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812D32A3DDAB0002D5927 /* GFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		0BD812CC2A3DC60A002D5927 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		0BD812CE2A3DC631002D5927 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		0BD812D02A3DC655002D5927 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		0BD812D32A3DDAB0002D5927 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		0BD812A82A3DC2B5002D5927 /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				0BD812D22A3DDA7E002D5927 /* Buttons */,
 				0BD812CB2A3DC5F3002D5927 /* Labels */,
 				0BD812CA2A3DC5CD002D5927 /* TabBarControllers */,
 			);
@@ -176,6 +179,14 @@
 				0BD812D02A3DC655002D5927 /* GFSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		0BD812D22A3DDA7E002D5927 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812D32A3DDAB0002D5927 /* GFButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 				0BD812C92A3DC5C6002D5927 /* GFTTabBarController.swift in Sources */,
 				0BD812972A3DBF75002D5927 /* SceneDelegate.swift in Sources */,
 				0BD812CF2A3DC631002D5927 /* GFTitleLabel.swift in Sources */,
+				0BD812D42A3DDAB0002D5927 /* GFButton.swift in Sources */,
 				0BD812C72A3DC566002D5927 /* UIview+ext.swift in Sources */,
 				0BD812B72A3DC3DB002D5927 /* Constants.swift in Sources */,
 				0BD812B92A3DC3F9002D5927 /* UIHelper.swift in Sources */,
