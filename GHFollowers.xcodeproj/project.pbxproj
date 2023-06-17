@@ -33,6 +33,7 @@
 		0BD812DE2A3E16B3002D5927 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812DD2A3E16B3002D5927 /* GFItemInfoView.swift */; };
 		0BD812E02A3E16D1002D5927 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812DF2A3E16D1002D5927 /* GFAlertContainerView.swift */; };
 		0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */; };
+		0BD812E62A3E179A002D5927 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812E52A3E179A002D5927 /* GFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		0BD812DD2A3E16B3002D5927 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		0BD812DF2A3E16D1002D5927 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		0BD812E52A3E179A002D5927 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		0BD812A82A3DC2B5002D5927 /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				0BD812E42A3E1792002D5927 /* TextFields */,
 				0BD812E12A3E173B002D5927 /* ImageViews */,
 				0BD812DA2A3E1679002D5927 /* Views */,
 				0BD812D22A3DDA7E002D5927 /* Buttons */,
@@ -231,6 +234,14 @@
 			path = ImageViews;
 			sourceTree = "<group>";
 		};
+		0BD812E42A3E1792002D5927 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812E52A3E179A002D5927 /* GFTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +329,7 @@
 				0BD812C92A3DC5C6002D5927 /* GFTTabBarController.swift in Sources */,
 				0BD812972A3DBF75002D5927 /* SceneDelegate.swift in Sources */,
 				0BD812CF2A3DC631002D5927 /* GFTitleLabel.swift in Sources */,
+				0BD812E62A3E179A002D5927 /* GFTextField.swift in Sources */,
 				0BD812DC2A3E1690002D5927 /* GFEmptyStateView.swift in Sources */,
 				0BD812D42A3DDAB0002D5927 /* GFButton.swift in Sources */,
 				0BD812C72A3DC566002D5927 /* UIview+ext.swift in Sources */,
