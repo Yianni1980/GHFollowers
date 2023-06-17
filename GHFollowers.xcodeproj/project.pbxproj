@@ -12,6 +12,9 @@
 		0BD812992A3DBF75002D5927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812982A3DBF75002D5927 /* ViewController.swift */; };
 		0BD8129E2A3DBF77002D5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD8129D2A3DBF77002D5927 /* Assets.xcassets */; };
 		0BD812A12A3DBF77002D5927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD8129F2A3DBF77002D5927 /* LaunchScreen.storyboard */; };
+		0BD812B52A3DC399002D5927 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812B42A3DC399002D5927 /* GFError.swift */; };
+		0BD812B72A3DC3DB002D5927 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812B62A3DC3DB002D5927 /* Constants.swift */; };
+		0BD812B92A3DC3F9002D5927 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812B82A3DC3F9002D5927 /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		0BD8129D2A3DBF77002D5927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BD812A02A3DBF77002D5927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BD812A22A3DBF77002D5927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD812B42A3DC399002D5927 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
+		0BD812B62A3DC3DB002D5927 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0BD812B82A3DC3F9002D5927 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,13 @@
 		0BD812932A3DBF75002D5927 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				0BD812AF2A3DC2C6002D5927 /* Utilities */,
+				0BD812AE2A3DC2C5002D5927 /* Managers */,
+				0BD812AD2A3DC2C4002D5927 /* Model */,
+				0BD812AC2A3DC2C3002D5927 /* Extensions */,
+				0BD812A82A3DC2B5002D5927 /* customViews */,
+				0BD812B02A3DC321002D5927 /* Screens */,
+				0BD812B12A3DC327002D5927 /* Support */,
 				0BD812942A3DBF75002D5927 /* AppDelegate.swift */,
 				0BD812962A3DBF75002D5927 /* SceneDelegate.swift */,
 				0BD812982A3DBF75002D5927 /* ViewController.swift */,
@@ -62,6 +75,58 @@
 				0BD812A22A3DBF77002D5927 /* Info.plist */,
 			);
 			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		0BD812A82A3DC2B5002D5927 /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = customViews;
+			sourceTree = "<group>";
+		};
+		0BD812AC2A3DC2C3002D5927 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0BD812AD2A3DC2C4002D5927 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BD812AE2A3DC2C5002D5927 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0BD812AF2A3DC2C6002D5927 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812B42A3DC399002D5927 /* GFError.swift */,
+				0BD812B62A3DC3DB002D5927 /* Constants.swift */,
+				0BD812B82A3DC3F9002D5927 /* UIHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0BD812B02A3DC321002D5927 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0BD812B12A3DC327002D5927 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +200,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BD812992A3DBF75002D5927 /* ViewController.swift in Sources */,
+				0BD812B52A3DC399002D5927 /* GFError.swift in Sources */,
 				0BD812952A3DBF75002D5927 /* AppDelegate.swift in Sources */,
 				0BD812972A3DBF75002D5927 /* SceneDelegate.swift in Sources */,
+				0BD812B72A3DC3DB002D5927 /* Constants.swift in Sources */,
+				0BD812B92A3DC3F9002D5927 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
