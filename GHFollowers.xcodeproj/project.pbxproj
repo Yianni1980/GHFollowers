@@ -32,6 +32,7 @@
 		0BD812DC2A3E1690002D5927 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812DB2A3E1690002D5927 /* GFEmptyStateView.swift */; };
 		0BD812DE2A3E16B3002D5927 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812DD2A3E16B3002D5927 /* GFItemInfoView.swift */; };
 		0BD812E02A3E16D1002D5927 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812DF2A3E16D1002D5927 /* GFAlertContainerView.swift */; };
+		0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		0BD812DB2A3E1690002D5927 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		0BD812DD2A3E16B3002D5927 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		0BD812DF2A3E16D1002D5927 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
+		0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		0BD812A82A3DC2B5002D5927 /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				0BD812E12A3E173B002D5927 /* ImageViews */,
 				0BD812DA2A3E1679002D5927 /* Views */,
 				0BD812D22A3DDA7E002D5927 /* Buttons */,
 				0BD812CB2A3DC5F3002D5927 /* Labels */,
@@ -220,6 +223,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0BD812E12A3E173B002D5927 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812E22A3E1757002D5927 /* GFAvatarImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,6 +321,7 @@
 				0BD812DC2A3E1690002D5927 /* GFEmptyStateView.swift in Sources */,
 				0BD812D42A3DDAB0002D5927 /* GFButton.swift in Sources */,
 				0BD812C72A3DC566002D5927 /* UIview+ext.swift in Sources */,
+				0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */,
 				0BD812D92A3E1628002D5927 /* FavoriteCell.swift in Sources */,
 				0BD812B72A3DC3DB002D5927 /* Constants.swift in Sources */,
 				0BD812B92A3DC3F9002D5927 /* UIHelper.swift in Sources */,
