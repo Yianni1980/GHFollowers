@@ -45,3 +45,4 @@ enum DeviceTypes {
     static func isiPhoneXAspectRatio() -> Bool {
         return isiPhoneX || isiPhoneXsMaxAndXr
     }
+}
