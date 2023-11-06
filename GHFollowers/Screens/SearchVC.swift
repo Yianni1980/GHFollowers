@@ -32,7 +32,7 @@ class SearchVC: UIViewController {
         
     }
     func createDismissKeyboardTapGesture() {
-        let tap = UITapGestureRecognizer(target:view, action: #selector(UIView.endEditing))
+       let tap = UITapGestureRecognizer(target:view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
     @objc func pushFollowerListVC(){
@@ -78,6 +78,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         pushFollowerListVC()
         return true
     }
