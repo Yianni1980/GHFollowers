@@ -7,11 +7,11 @@
 
 import UIKit
 import SafariServices
-
-protocol userInfoVCdelegate: AnyObject {
-    func didTapGitHubProfile(for user:User)
-    func didTapGetFollowers(for user:User)
+ 
+protocol UserInfoVCDelegate:AnyObject {
+        func didRequestFollowers(for username: String)
 }
+
 
 class UserInfoVC: GFDataLoadingVC {
     let headerView         = UIView()
@@ -21,7 +21,9 @@ class UserInfoVC: GFDataLoadingVC {
     var itemViews:[UIView] = []
     
     var username:String!
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
+
+    
     
     
     override func viewDidLoad() {
@@ -53,14 +55,9 @@ class UserInfoVC: GFDataLoadingVC {
     
     
     func configureUIElements(with user:User){
-        let repoItemVC = GFRepoItemVC(user: user)
-        repoItemVC.delegate = self
-        let followersItemVC = GFFollowerItemVC(user: user)
-        followersItemVC.delegate  = self
-        self.add(childVC: repoItemVC, to: self.itemViewOne)
-        self.add(childVC: followersItemVC, to: self.itemViewTwo)
+        self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
+        self.add(childVC: GFFollowerItemVC(user: user, delegate: self), to: self.itemViewTwo)
         self.add(childVC: GHUserInfoHeaderVC(user: user), to: self.headerView)
-        
         self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
     }
     
@@ -110,7 +107,7 @@ class UserInfoVC: GFDataLoadingVC {
 }
 
 
-extension UserInfoVC:userInfoVCdelegate {
+extension UserInfoVC:GFRepoItemVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid URL", messsage: "The url attached to this user is invalid", buttonTitle: "ok")
@@ -120,6 +117,11 @@ extension UserInfoVC:userInfoVCdelegate {
     }
     
     
+    
+}
+
+
+extension UserInfoVC:GFFollowerItemVCDelegate {
     func didTapGetFollowers(for user: User) {
         guard  user.followers != 0 else {
             presentGFAlertOnMainThread(title: "No followers", messsage: "this user hasno followers. what a shame", buttonTitle: "ok")
@@ -128,5 +130,8 @@ extension UserInfoVC:userInfoVCdelegate {
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }
+    
+    
 }
+
 

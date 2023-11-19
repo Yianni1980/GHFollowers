@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol ItemInfoVCDelegate: AnyObject {
+    func didTapGitHubProfile(for user:User)
+    func didTapGetFollowers(for user:User)
+}
+
+
 class GFItemInfoVC: UIViewController {
     let stackView       = UIStackView()
     let itemInfoViewOne = GFItemInfoView()
@@ -14,7 +20,6 @@ class GFItemInfoVC: UIViewController {
     let actionButton    = GFButton()
     
     var user: User!
-    var delegate : userInfoVCdelegate!
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -38,7 +43,7 @@ class GFItemInfoVC: UIViewController {
     
     private   func configureBackgroundView() {
         view.layer.cornerRadius = 18
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor    = .secondarySystemBackground
         
     }
     
@@ -46,6 +51,7 @@ class GFItemInfoVC: UIViewController {
     private func configureStackView() {
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
+        
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
         
