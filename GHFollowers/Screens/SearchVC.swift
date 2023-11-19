@@ -49,6 +49,7 @@ class SearchVC: UIViewController {
             return
         }
         usernameTextField.resignFirstResponder() //or view.endEditing(true)
+        
         let followerListVC = FollowerListVC(username: usernameTextField.text!)
         
         navigationController?.pushViewController(followerListVC, animated: true)

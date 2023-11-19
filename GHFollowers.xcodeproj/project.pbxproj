@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3F26192B0ABE1A00EAE289 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F26182B0ABE1A00EAE289 /* UITableView+Ext.swift */; };
 		0BD812952A3DBF75002D5927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812942A3DBF75002D5927 /* AppDelegate.swift */; };
 		0BD812972A3DBF75002D5927 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812962A3DBF75002D5927 /* SceneDelegate.swift */; };
 		0BD8129E2A3DBF77002D5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD8129D2A3DBF77002D5927 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3F26182B0ABE1A00EAE289 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		0BD812912A3DBF75002D5927 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD812942A3DBF75002D5927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BD812962A3DBF75002D5927 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				0BD812C22A3DC526002D5927 /* UIViewController+ext.swift */,
 				0BD812C42A3DC54A002D5927 /* Date+Ext.swift */,
 				0BD812C62A3DC566002D5927 /* UIview+ext.swift */,
+				0B3F26182B0ABE1A00EAE289 /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */,
 				0BD812FA2A3E1A96002D5927 /* FollowerListVC.swift in Sources */,
 				0BD812D92A3E1628002D5927 /* FavoriteCell.swift in Sources */,
+				0B3F26192B0ABE1A00EAE289 /* UITableView+Ext.swift in Sources */,
 				0BD812B72A3DC3DB002D5927 /* Constants.swift in Sources */,
 				0BD812B92A3DC3F9002D5927 /* UIHelper.swift in Sources */,
 			);
