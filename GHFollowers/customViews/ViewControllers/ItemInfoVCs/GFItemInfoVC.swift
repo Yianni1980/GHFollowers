@@ -8,16 +8,18 @@
 import UIKit
 
 class GFItemInfoVC: UIViewController {
-    let stackView = UIStackView()
+    let stackView       = UIStackView()
     let itemInfoViewOne = GFItemInfoView()
     let itemInfoViewTwo = GFItemInfoView()
-    let actionButton = GFButton()
+    let actionButton    = GFButton()
+    
     var user: User!
     var delegate : userInfoVCdelegate!
+    
     init(user: User) {
-           super.init(nibName: nil, bundle: nil)
-           self.user = user
-       }
+        super.init(nibName: nil, bundle: nil)
+        self.user = user
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -32,11 +34,15 @@ class GFItemInfoVC: UIViewController {
         
         
     }
+    
+    
     private   func configureBackgroundView() {
         view.layer.cornerRadius = 18
         view.backgroundColor = .secondarySystemBackground
         
     }
+    
+    
     private func configureStackView() {
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
@@ -44,16 +50,23 @@ class GFItemInfoVC: UIViewController {
         stackView.addArrangedSubview(itemInfoViewTwo)
         
     }
+    
+    
     private func configureActionButton() {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }
-     @objc func actionButtonTapped() {}
+    
+    
+    @objc func actionButtonTapped() {}
+    
+    
     private  func layoutUI() {
         view.addSubViews(stackView,actionButton)
         
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20
+        
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),

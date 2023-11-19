@@ -8,14 +8,17 @@
 import UIKit
 
 class GHUserInfoHeaderVC: UIViewController {
-    let avatarImageView = GFAvatarImageView(frame: .zero)
-    let usernameLabel = GFTitleLabel(textAlignment: .left, fontSize: 34)
-    let nameLabel = GFSecondaryTitleLabel(fontSize: 18)
-    let locationImageView = UIImageView()
-    let locationLabel = GFSecondaryTitleLabel(fontSize: 18)
-    let bioLabel = GFBodyLabel(textAlignment: .left)
+    
+    let avatarImageView     = GFAvatarImageView(frame: .zero)
+    let usernameLabel       = GFTitleLabel(textAlignment: .left, fontSize: 34)
+    let nameLabel           = GFSecondaryTitleLabel(fontSize: 18)
+    let locationImageView   = UIImageView()
+    let locationLabel       = GFSecondaryTitleLabel(fontSize: 18)
+    let bioLabel            = GFBodyLabel(textAlignment: .left)
     
     var user: User!
+    
+    
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user

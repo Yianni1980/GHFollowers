@@ -9,7 +9,6 @@ import UIKit
 
 protocol FollowerListVCDelegate:AnyObject {
     func didRequestFollowers(for username:String)
-    
 }
 
 class FollowerListVC: GFDataLoadingVC {
@@ -21,17 +20,23 @@ class FollowerListVC: GFDataLoadingVC {
     var hasMoreFollowers = true
     var isSearching  = false
     var isLoadingMoreFollowers = false
+    
     var  collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section,Follower>!
+    
+    
     init (username: String) {
         super.init(nibName: nil, bundle: nil)
-        self.username = username
-        title = username
+        self.username   = username
+        title           = username
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -39,20 +44,20 @@ class FollowerListVC: GFDataLoadingVC {
         configureCollectionView()
         getFollowers(username: username,page:page)
         configureDataSource()
-        
-        
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
         navigationItem.rightBarButtonItem = addButton
-        
     }
     
     
@@ -65,13 +70,16 @@ class FollowerListVC: GFDataLoadingVC {
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
         
     }
+    
+    
     func configureSearchController() {
-        let searchController = UISearchController()
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Search for a username"
+        let searchController                                  = UISearchController()
+        searchController.searchResultsUpdater                 = self
+        searchController.searchBar.placeholder                = "Search for a username"
         searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
+        navigationItem.searchController                       = searchController
     }
+    
     
     func getFollowers(username:String,page:Int ) {
         
@@ -100,6 +108,8 @@ class FollowerListVC: GFDataLoadingVC {
             
         }
     }
+    
+    
     func configureDataSource() {
         
         dataSource = UICollectionViewDiffableDataSource<Section,Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
@@ -108,12 +118,16 @@ class FollowerListVC: GFDataLoadingVC {
             return cell
         })
     }
+    
+    
     func updateData(on followers: [Follower]) {
         var snapshot  = NSDiffableDataSourceSnapshot<Section,Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
         DispatchQueue.main.async {self.dataSource.apply(snapshot, animatingDifferences: true)}
     }
+    
+    
     @objc func addButtonTapped() {
         showLoadingView()
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result  in
@@ -142,9 +156,9 @@ class FollowerListVC: GFDataLoadingVC {
 extension FollowerListVC: UICollectionViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.size.height
+        let offsetY         = scrollView.contentOffset.y
+        let contentHeight   = scrollView.contentSize.height
+        let height          = scrollView.frame.size.height
         
         if offsetY > contentHeight - height {
             guard hasMoreFollowers, !isLoadingMoreFollowers else {return}
@@ -152,27 +166,28 @@ extension FollowerListVC: UICollectionViewDelegate {
             getFollowers(username: username,page: page)
         }
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let activeArray = isSearching ? filterFollowers: followers
-        let follower = activeArray[indexPath.item]
-        let destVC = UserInfoVC()
-        destVC.delegate = self
-        destVC.username = follower.login
-        let navController = UINavigationController(rootViewController:destVC )
+        let activeArray     = isSearching ? filterFollowers: followers
+        let follower        = activeArray[indexPath.item]
+        let destVC          = UserInfoVC()
+        destVC.delegate     = self
+        destVC.username     = follower.login
+        let navController   = UINavigationController(rootViewController:destVC )
         present(navController,animated: true)
     }
-    
 }
 
 
 extension FollowerListVC:UISearchResultsUpdating{
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else {
             filterFollowers.removeAll()
             updateData(on: followers)
             isSearching = false
             return
-            
         }
         isSearching = true
         filterFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased())}
@@ -180,14 +195,15 @@ extension FollowerListVC:UISearchResultsUpdating{
         
         
     }
-   
+    
 }
+
 extension FollowerListVC:FollowerListVCDelegate{
+    
     func didRequestFollowers(for username: String) {
-        self.username = username
-        title = username
-        page = 1
-        
+        self.username   = username
+        title           = username
+        page            = 1
         followers.removeAll()
         filterFollowers.removeAll()
         collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
