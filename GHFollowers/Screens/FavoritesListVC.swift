@@ -52,19 +52,23 @@ class FavoritesListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let favorites):
+                updateUI(with: favorites)
                 
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "No favorites Add one onm the follower screen", in: self.view)
-                }else {
-                    self.favorites = favorites
-                    self.tableView.reloadDataOnMainThread()
-                }
             case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Something went wrong", messsage: error.rawValue, buttonTitle: "ok")
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
                 
             }
         }
         
+    }
+    
+    func updateUI(with favorites:[Follower]) {
+        if favorites.isEmpty {
+            self.showEmptyStateView(with: "No favorites Add one onm the follower screen", in: self.view)
+        }else {
+            self.favorites = favorites
+            self.tableView.reloadDataOnMainThread()
+        }
     }
     
 }
@@ -97,7 +101,6 @@ extension FavoritesListVC:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else {return}
         
-    
         PersistenceManager.updateWith(favorite:favorites[indexPath.row], actionType: .remove) { [weak self] error in
             guard let self = self else {return}
             guard let error = error else {
@@ -105,7 +108,7 @@ extension FavoritesListVC:UITableViewDataSource,UITableViewDelegate {
                 tableView.deleteRows(at: [indexPath], with: .left)
                 return
             }
-            self.presentGFAlertOnMainThread(title: "Unable to remove", messsage: error.rawValue, buttonTitle: "ok")
+            self.presentGFAlertOnMainThread(title: "Unable to remove", message: error.rawValue, buttonTitle: "ok")
         }
         
     }
