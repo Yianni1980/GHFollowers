@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol GFFollowerItemVCDelegate: class {
+protocol GFFollowerItemVCDelegate: AnyObject {
     func didTapGetFollowers(for user: User)
 }
 
@@ -36,7 +36,7 @@ class GFFollowerItemVC: GFItemInfoVC {
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .followers, withCount: user.followers)
         itemInfoViewTwo.set(itemInfoType: .following, withCount: user.following)
-        actionButton.set(background: .systemGreen, title: "Get Followers")
+        actionButton.set(color: .systemGreen, title: "Get Followers", systemImageName: "person.3")
     }
     
     
