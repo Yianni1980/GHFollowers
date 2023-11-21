@@ -55,8 +55,10 @@ class FavoritesListVC: GFDataLoadingVC {
                 updateUI(with: favorites)
                 
             case .failure(let error):
-                self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
-                
+                DispatchQueue.main.async {
+                    
+                    self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
+                }
             }
         }
         
