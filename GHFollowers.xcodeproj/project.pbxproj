@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2A83542B0EA27F00AFC931 /* FollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2A83532B0EA27F00AFC931 /* FollowerView.swift */; };
 		0B3F26192B0ABE1A00EAE289 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F26182B0ABE1A00EAE289 /* UITableView+Ext.swift */; };
 		0BD812952A3DBF75002D5927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812942A3DBF75002D5927 /* AppDelegate.swift */; };
 		0BD812972A3DBF75002D5927 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD812962A3DBF75002D5927 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2A83532B0EA27F00AFC931 /* FollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerView.swift; sourceTree = "<group>"; };
 		0B3F26182B0ABE1A00EAE289 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		0BD812912A3DBF75002D5927 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD812942A3DBF75002D5927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2A83522B0EA15000AFC931 /* FollowerCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD812D62A3E160D002D5927 /* FollowerCell.swift */,
+				0B2A83532B0EA27F00AFC931 /* FollowerView.swift */,
+			);
+			path = FollowerCell;
+			sourceTree = "<group>";
+		};
 		0BD812882A3DBF75002D5927 = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +246,7 @@
 		0BD812D52A3E15E2002D5927 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0BD812D62A3E160D002D5927 /* FollowerCell.swift */,
+				0B2A83522B0EA15000AFC931 /* FollowerCell */,
 				0BD812D82A3E1628002D5927 /* FavoriteCell.swift */,
 			);
 			path = Cells;
@@ -388,6 +399,7 @@
 				0BD812F02A3E18A4002D5927 /* GFAlertVC.swift in Sources */,
 				0BD812C72A3DC566002D5927 /* UIview+ext.swift in Sources */,
 				0BD812E32A3E1757002D5927 /* GFAvatarImageView.swift in Sources */,
+				0B2A83542B0EA27F00AFC931 /* FollowerView.swift in Sources */,
 				0BD812FA2A3E1A96002D5927 /* FollowerListVC.swift in Sources */,
 				0BD812D92A3E1628002D5927 /* FavoriteCell.swift in Sources */,
 				0B3F26192B0ABE1A00EAE289 /* UITableView+Ext.swift in Sources */,
