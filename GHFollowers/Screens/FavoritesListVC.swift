@@ -25,6 +25,18 @@ class FavoritesListVC: GFDataLoadingVC {
     }
     
     
+    override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+        if favorites.isEmpty {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = .init(systemName: "star")
+            config.text = "No favorites"
+            config.secondaryText = "This user has no followers. Add someone"
+            contentUnavailableConfiguration = config
+        } else {
+            contentUnavailableConfiguration = nil
+        }
+    }
+    
     func configureViewController() {
         view.backgroundColor  = .systemBackground
         title = "Favorites"
@@ -65,13 +77,11 @@ class FavoritesListVC: GFDataLoadingVC {
     }
     
     func updateUI(with favorites:[Follower]) {
-        if favorites.isEmpty {
-            self.showEmptyStateView(with: "No favorites Add one onm the follower screen", in: self.view)
-        }else {
             self.favorites = favorites
+        setNeedsUpdateContentUnavailableConfiguration()
             self.tableView.reloadDataOnMainThread()
         }
-    }
+    
     
 }
 
@@ -108,12 +118,13 @@ extension FavoritesListVC:UITableViewDataSource,UITableViewDelegate {
             guard let error else {
                 self.favorites.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .left)
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "No favorites Add one onm the follower screen", in: self.view)
-                }
+                setNeedsUpdateContentUnavailableConfiguration()
                 return
             }
-            self.presentGFAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "ok")
+            DispatchQueue.main.async {
+                self.presentGFAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "ok")
+
+            }
         }
         
     }
